@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          var _fetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(val) {
+              _fetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto) {
+              var desc = Object.getOwnPropertyDescriptor(proto, 'fetch');
+              if (desc && !desc.set) {
+                var protoFetch = window.fetch ? window.fetch.bind(window) : undefined;
+                Object.defineProperty(proto, 'fetch', {
+                  get: function() { return protoFetch; },
+                  set: function(val) { protoFetch = val; },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Areeba Imran — Affiliate Marketer | PPC & Performance Marketing</title>
+    <meta name="description" content="Portfolio of Areeba Imran: Performance-driven marketing campaigns using PPC, affiliate strategies, coupon & deal platforms, and AI-powered workflows." />
+    <meta property="og:title" content="Areeba Imran — Affiliate Marketer | PPC & Performance Marketing" />
+    <meta property="og:description" content="I build and optimize performance-driven marketing campaigns using PPC, affiliate strategies, research and AI-powered workflows." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Areeba Imran — Affiliate Marketer | PPC & Performance Marketing" />
+    <meta name="twitter:description" content="Performance marketing, Google Ads / PPC management, affiliate coupon platforms & AI-assisted campaign workflows." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Areeba Imran",
+      "jobTitle": "Affiliate Marketer & PPC Performance Specialist",
+      "description": "Specializing in PPC, performance marketing, affiliate websites, keyword research, and AI-assisted marketing workflows.",
+      "knowsAbout": [
+        "Affiliate Marketing",
+        "PPC Advertising",
+        "Google Ads",
+        "Facebook Ads",
+        "Coupon and Deal Websites",
+        "Performance Tracking & ROI Optimization",
+        "AI-Assisted Content & Keyword Research"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#FAF8F5] text-[#1E1736] antialiased selection:bg-[#FDE68A] selection:text-[#78350F]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
